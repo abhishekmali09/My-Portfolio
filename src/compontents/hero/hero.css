@@ -27,6 +27,7 @@
 
 .hImg img {
   object-fit: cover;
+  left: 10px;
   width: 100%;
   height: auto;
 }
@@ -52,7 +53,7 @@
 }
 
 .hsubtitle {
-  font-size: 15px;
+  font-size: 20px;
   margin-left: 20px;
   color:#6e2d04 ;
 }

@@ -58,9 +58,9 @@ const Hero = () => {
           className="hsubtitle"
         >
           <motion.h2 variants={awardVariants}>Software Developer</motion.h2>
-          <motion.p variants={awardVariants}>Passionate React Developer and B.Tech CSE student (GGSIPU, 2026) with experience in building responsive
- web apps using React.js and Tailwind.
- <br/>
+          <motion.p variants={awardVariants}>Passionate React Developer and B.Tech CSE student (GGSIPU, 2026) with experience in
+          <br/> building responsive web apps using React.js and Tailwind.
+          <br/>
   Skilled in Java, Spring Boot, and problem-solving, with a strong work ethic and focus on
  user-centric solutions.</motion.p>
         </motion.div>
