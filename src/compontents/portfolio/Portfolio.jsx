@@ -1,44 +1,43 @@
 import { useEffect, useRef, useState } from "react";
 import "./portfolio.css";
 import { motion, useInView, useScroll, useTransform } from "motion/react";
-import hospital from "../../../../public/Images/hospital.png";
-import weatherwise from "../../../../public/Images/weatherwise.png";
-import sport from "../../../../public/Images/sport.png";
-import cabcontrol from "../../../../public/Images/cabcontrol.png";
-import upcoming from "../../../../public/Images/upcoming_project.png";
-
+import hospital from "../../assets/Images/hospital.png";
+import weatherwise from "../../assets/Images/weatherwise.png";
+import sport from "../../assets/Images/sport.png";
+import cabcontrol from "../../assets/Images/cabcontrol.png";
+import upcoming from "../../assets/Images/upcoming_project.png"; 
 const items = [
   {
     id: 1,
-    img: {hospital},
+    img: hospital,
     title: "Freelancing Project",
     desc: " Designed and developed a healthcare web platform that allows users to search for hospitals, view detailed doctor profiles, and book appointments online.",
     link: "https://cureitabroad.com/",
   },
   {
     id: 2,
-    img: {weatherwise},
+    img: weatherwise,
     title: "WeatherWise",
     desc: "Developed WeatherWise, a Raspberry Pi-based weather station that provides real-time, geo-mapped weather data for rural areas using integrated sensors and Maps API.",
     link: " https://elaborate-pasca-3e5fd1.netlify.app/",
   },
   {
     id: 3,
-    img: {sport},
+    img: sport,
     title: " Live Sports Tracker",
     desc: "Developed a real-time sports tracking website using React.js and Tailwind CSS with live match data and a responsive, dynamically updating UI.",
     link: " https://github.com/abhishekmali09/Live-Sports-Tracker",
   },
   {
     id: 4,
-    img: {cabcontrol},
+    img: cabcontrol,
     title: " Corporate Cab Management System",
     desc: "Built CabControl, a corporate cab management system using React.js, Tailwind CSS, and Google Maps API with real-time tracking, smart scheduling, and integrated analytics dashboards.",
     link: "https://github.com/abhishekmali09/cabcontrol",
   },
   {
     id: 5,
-    img: {upcoming},
+    img: upcoming,
     title: "Upcoming Project",
     desc: "I'm currently working on a new project that leverages modern web technologies and AI. While I can't reveal full details just yet, it's something I'm really excited about. Stay tuned — more coming soon!",
     link: "/",
@@ -92,7 +91,7 @@ const ListItem = ({ item }) => {
         animate={isInView ? "animate" : "initial"}
         className="pImg"
       >
-        <img src={item.img} alt="" />
+        <img src={item.img} alt="project image" />
       </motion.div>
       <motion.div
         variants={textVariants}
