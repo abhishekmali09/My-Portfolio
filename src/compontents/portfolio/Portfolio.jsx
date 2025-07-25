@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import "./portfolio.css";
 import { motion, useInView, useScroll, useTransform } from "motion/react";
 import hospital from "../../../../public/Images/hospital.png";
-import WeatherWise from "../../../../public/Images/WeatherWise.png";
-import sport from "../../../../public/Images/sport .png";
+import weatherwise from "../../../../public/Images/weatherwise.png";
+import sport from "../../../../public/Images/sport.png";
 import cabcontrol from "../../../../public/Images/cabcontrol.png";
-import upcoming from "../../../../public/Images/upcoming project.png";
+import upcoming from "../../../../public/Images/upcoming_project.png";
 
 const items = [
   {
@@ -17,7 +17,7 @@ const items = [
   },
   {
     id: 2,
-    img: {WeatherWise},
+    img: {weatherwise},
     title: "WeatherWise",
     desc: "Developed WeatherWise, a Raspberry Pi-based weather station that provides real-time, geo-mapped weather data for rural areas using integrated sensors and Maps API.",
     link: " https://elaborate-pasca-3e5fd1.netlify.app/",
