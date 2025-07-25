@@ -30,6 +30,16 @@ const Contact = () => {
     const sendEmail = (e) => {
     e.preventDefault();
 
+    const name = form.current.user_username.value.trim();
+    const email = form.current.user_email.value.trim();
+    const message = form.current.user_message.value.trim();
+
+    if (!name || !email || !message) {
+      setError(true);
+      setSuccess(false);
+      return;
+    }
+
      emailjs
       .sendForm(
         import.meta.env.VITE_SERVICE_ID,
@@ -76,7 +86,7 @@ const Contact = () => {
 
                    <motion.button variants ={listVariants} className="formButton">Send</motion.button>
                      {success && <span>Your message has been sent!</span>}
-                        {error && <span>Something went wrong, please try again.</span>}
+                    {error && <span>All fields are required. Please fill in every field.</span>}
                 </motion.form>
             </div>
            <div className="cSection"><ContactSvg/></div>

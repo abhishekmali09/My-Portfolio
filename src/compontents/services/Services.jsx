@@ -10,11 +10,24 @@ const Services = () => {
           className="splineScene"
         />
       </div>
-      <div className="resumeSection">
-        <img src="/resume.jpg" alt="Resume" className="serviceImgLarge" />
-        <a href="/resume.pdf" download target="_blank" rel="noopener noreferrer">
-          <button className="downloadBtnLarge">Download Resume</button>
-        </a>
+      <div className="servicesList">
+        {/* Placeholder for 4 card components */}
+        <div className="serviceCard">
+          <div className="serviceTitle"> Frontend</div>
+          <p>React,Tailwind CSS</p>
+        </div>
+        <div className="serviceCard">
+          <div className="serviceTitle"> Languages</div>
+          <p> HTML,CSS,Java,JavaScript, Python</p>
+        </div>
+        <div className="serviceCard">
+          <div className="serviceTitle">Backend </div>
+          <p>Spring,Spring Boot,MySQL</p>
+        </div>
+        <div className="serviceCard">
+          <div className="serviceTitle"> Tools</div>
+          <p>Figma,Canva</p>
+        </div>
       </div>
     </div>
   );

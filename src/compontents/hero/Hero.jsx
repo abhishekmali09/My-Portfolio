@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Shape from "./Shape";
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
+import { Link } from "react-router-dom";
 
 const awardVariants = {
   initial: {
@@ -56,8 +57,10 @@ const Hero = () => {
           animate="animate"
           className="hsubtitle"
         >
-          <motion.h2 variants={awardVariants}>Frontend Developer</motion.h2>
-          <motion.p variants={awardVariants}>I am a beginner level dev</motion.p>
+          <motion.h2 variants={awardVariants}>Software Developer</motion.h2>
+          <motion.p variants={awardVariants}>Passionate React Developer and B.Tech CSE student (GGSIPU, 2026) with experience in building responsive
+ web apps using React.js and Tailwind. Skilled in Java, Spring Boot, and problem-solving, with a strong work ethic and focus on
+ user-centric solutions.</motion.p>
         </motion.div>
         <div className="hbtn"></div>
       </div>
@@ -68,31 +71,22 @@ const Hero = () => {
           animate="animate"
           className="follow"
         >
-          <motion.a variants={followVariants} href="#">
-            <img src="#" alt="social icon" />
+          <motion.a variants={followVariants} href="https://www.linkedin.com/in/abhishekmali09/">
+          <img width="48" height="48" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin"/>
           </motion.a>
-          <motion.a variants={followVariants} href="#">
-            <img src="#" alt="social icon" />
-          </motion.a>
-          <motion.a variants={followVariants} href="#">
-            <img src="#" alt="social icon" />
+          <motion.a variants={followVariants} href="https://github.com/abhishekmali09">
+          <img width="64" height="64" src="https://img.icons8.com/sf-black/64/github.png" alt="github"/>
           </motion.a>
           <motion.div variants={followVariants} className="followTextContainer">
-            <motion.div className="followText">dunk me!!</motion.div>
+            <motion.div className="followText">follow me!!</motion.div>
           </motion.div>
         </motion.div>
-        <Speech />
+      
 
-        <motion.a
-          href="/#contact"
+        <Link
+          to="/Contact"
           className="contactLink"
-          animate={{
-            x: [200, 0],
-            opacity: [0, 1],
-          }}
-          transition={{
-            duration: 2,
-          }}
+          style={{ textDecoration: 'none' }}
         >
           <motion.div
             className="contactButton"
@@ -134,7 +128,7 @@ const Hero = () => {
               </svg>
             </div>
           </motion.div>
-        </motion.a>
+        </Link>
       </div>
       <div className="bg">
         <Canvas>

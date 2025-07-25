@@ -38,20 +38,23 @@
 } */
 
 /* WE'LL NOT GIVE BACKGROUND COLOR TO THE FIRST AND LAST ITEMS (to keep scrolling effect consistent) */
+.pItem:nth-child(2) {
+  background: linear-gradient(to right, #b57a04, #f4ce5c);
+}
 .pItem:nth-child(3) {
   background: linear-gradient(to right, transparent, #6a6068);
 }
 
 .pItem:nth-child(4) {
-  background: linear-gradient(to right, #07121d, #5a7b87);
+  background: linear-gradient(to right, #647f99, #286074);
 }
 
 .pItem:nth-child(5) {
-  background: linear-gradient(to right, #02222e, #261c31);
+  background: linear-gradient(to right, #02222e, #816f93);
 }
 
 .pItem:nth-child(6) {
-  background: linear-gradient(to right, #0f0916, #48355e);
+  background: linear-gradient(to right, #af9909, #48355e);
 }
 
 .pProgress {
@@ -76,6 +79,7 @@
 
 .pText {
   width: 50%;
+  color: rgb(253, 253, 253);
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -83,6 +87,7 @@
 
 .pText h1 {
   font-size: 56px;
+  color:#6e2d04 ;
 }
 
 .pText p {
@@ -127,9 +132,45 @@
 }
 
 @media (max-width: 768px) {
+  .portfolio {
+    padding: 12px 0;
+  }
+  .pItem {
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px;
+  }
+  .pImg, .pText {
+    width: 100%;
+    min-width: 0;
+  }
+  .pText h1 {
+    font-size: 28px;
+  }
+  .pText p {
+    font-size: 1rem;
+  }
   .pProgress {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio {
+    padding: 4px 0;
+  }
+  .pText h1 {
+    font-size: 18px;
+  }
+  .pText p {
+    font-size: 0.9rem;
+  }
+  .pProgress {
+    width: 24px;
+    height: 24px;
+    bottom: 12px;
   }
 }
 

@@ -255,11 +255,12 @@
 
 .hsubtitle {
   font-size: 20px;
-  color: #6e2d04;
+  color:#6e2d04 ;
 }
 
 .hSection.right {
   align-items: end;
+  
 }
 
 .follow {
@@ -272,8 +273,8 @@
 }
 
 .follow img {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 .followTextContainer {
