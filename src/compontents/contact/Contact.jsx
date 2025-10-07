@@ -1,3 +1,4 @@
+import "./contact.css"
 import emailjs from "@emailjs/browser";
 import {useRef} from "react";
 import { useState } from "react";
@@ -7,12 +8,12 @@ import ContactSvg from "../contact/ContactSvg";
 const listVariants = {
     initial: {
         opacity: 0,
-        x:100,
+        x:100,  
     },
-    animate: {
+    animate: {  
         opacity: 1,
         x: 0,
-        transition: {
+        transition: {   
             duration: 0.5,
             staggerChildren: 0.2,
         },
@@ -58,39 +59,38 @@ const Contact = () => {
         }
       );
     };
-
+  
     const isInView = useInView(ref,{margin:"-200px"});
     return (
-        <div className="h-full flex flex-col md:flex-row gap-6 md:gap-[100px] p-1 md:p-0" ref={ref} onSubmit={sendEmail}>
-            <div className="w-full md:w-1/2 h-full p-5 md:p-5 flex items-center justify-center">
-                <motion.form
+        <div className="contact" ref={ref} onSubmit={sendEmail}>
+            <div class ="cSection"> 
+                <motion.form 
                 ref={form}
                 variants ={listVariants}
-                 animate={isInView ? "animate" : "initial"}
-                 className="w-full md:w-4/5 flex flex-col gap-5" >
-                   <motion.h1 variants ={listVariants}>Let's keep in touch</motion.h1>
-                   <motion.div variants ={listVariants} className="flex flex-col gap-2.5 w-full md:w-[450px] pb-2.5">
-                        <label className="text-[13px]">Name</label>
-                        <input type="text" name="user_username" placeholder="Enter your name" className="p-3 border-none rounded-[5px]" />
+                 animate={isInView ? "animate" : "initial"} >
+                   <motion.h1 variants ={listVariants} className="cTitle">Let's keep in touch</motion.h1>
+                   <motion.div variants ={listVariants} className="formItem">
+                        <label>Name</label>
+                        <input type="text" name="user_username" placeholder="Enter your name" />
                    </motion.div>
 
-                   <motion.div variants ={listVariants} className="flex flex-col gap-2.5 w-full md:w-[450px] pb-2.5">
-                        <label className="text-[13px]">Email</label>
-                        <input type="email"  name = "user_email" placeholder="Enter email" className="p-3 border-none rounded-[5px]" />
+                   <motion.div variants ={listVariants} className="formItem">
+                        <label>Email</label>
+                        <input type="email"  name = "user_email" placeholder="Enter email" />
                    </motion.div>
 
-                   <motion.div variants ={listVariants} className="flex flex-col gap-2.5 w-full md:w-[450px] pb-2.5">
-                        <label className="text-[13px]">Message</label>
-                        <textarea rows={10} name="user_message" placeholder="Write your message..." className="p-3 border-none rounded-[5px]"></textarea>
+                   <motion.div variants ={listVariants} className="formItem">
+                        <label>Message</label>
+                        <textarea rows={10} name="user_message" placeholder="Write your message..."></textarea>
                    </motion.div>
 
-                   <motion.button variants ={listVariants} className="bg-[#7d3f0c] text-[blanchedalmond] w-full md:w-[200px] h-10 text-base py-2 px-0 text-center border-none rounded-[5px] cursor-pointer">Send</motion.button>
+                   <motion.button variants ={listVariants} className="formButton">Send</motion.button>
                      {success && <span>Your message has been sent!</span>}
                     {error && <span>All fields are required. Please fill in every field.</span>}
                 </motion.form>
             </div>
-           <div className="w-full md:w-1/2 h-full p-5 md:p-0 flex items-center justify-center"><ContactSvg/></div>
+           <div className="cSection"><ContactSvg/></div>
         </div>
     )
-}
+} 
 export default Contact;
