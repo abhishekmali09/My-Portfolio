@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import "./portfolio.css";
 import { motion, useInView, useScroll, useTransform } from "motion/react";
 import hospital from "../../assets/Images/hospital.png";
 import weatherwise from "../../assets/Images/weatherwise.png";
@@ -84,24 +83,33 @@ const ListItem = ({ item }) => {
 
   const isInView = useInView(ref, { margin: "-100px" });
 
+  const bgStyles = [
+    '',
+    'bg-gradient-to-r from-[#b57a04] to-[#f4ce5c]',
+    'bg-gradient-to-r from-transparent to-[#6a6068]',
+    'bg-gradient-to-r from-[#647f99] to-[#286074]',
+    'bg-gradient-to-r from-[#02222e] to-[#816f93]',
+    'bg-gradient-to-r from-[#af9909] to-[#48355e]',
+  ];
+
   return (
-    <div className="pItem" ref={ref}>
+    <div className={`h-screen w-screen overflow-hidden flex flex-col md:flex-row items-center justify-center gap-6 md:gap-[100px] p-2 md:p-0 ${bgStyles[item.id] || ''}`} ref={ref}>
       <motion.div
         variants={imgVariants}
         animate={isInView ? "animate" : "initial"}
-        className="pImg"
+        className="w-full md:w-[40%] rounded-[20px] overflow-hidden"
       >
-        <img src={item.img} alt="project image" />
+        <img src={item.img} alt="project image" className="w-full h-full object-cover" />
       </motion.div>
       <motion.div
         variants={textVariants}
         animate={isInView ? "animate" : "initial"}
-        className="pText"
+        className="w-full md:w-[50%] text-white flex flex-col gap-6"
       >
-        <motion.h1 variants={textVariants}>{item.title}</motion.h1>
-        <motion.p variants={textVariants}>{item.desc}</motion.p>
+        <motion.h1 variants={textVariants} className="text-[28px] md:text-[48px] lg:text-[56px] text-[#6e2d04]">{item.title}</motion.h1>
+        <motion.p variants={textVariants} className="font-light text-base md:text-base">{item.desc}</motion.p>
         <motion.a variants={textVariants} href={item.link}>
-          <button>View Project</button>
+          <button className="bg-white p-3 rounded-[10px] border-none font-medium cursor-pointer">View Project</button>
         </motion.a>
       </motion.div>
     </div>
@@ -146,13 +154,12 @@ const Portfolio = () => {
   );
 
   return (
-    <div className="portfolio" ref={ref}>
-      <motion.div className="pList" style={{ x: xTranslate }}>
+    <div className="h-[600vh] relative p-1 md:p-0" ref={ref}>
+      <motion.div className="sticky top-0 flex h-screen w-max" style={{ x: xTranslate }}>
         <div
           className="empty"
           style={{
             width: window.innerWidth - containerDistance,
-            // backgroundColor: "pink",
           }}
         />
         {items.map((item) => (
@@ -164,7 +171,7 @@ const Portfolio = () => {
       <section />
       <section />
       <section />
-      <div className="pProgress">
+      <div className="sticky w-20 h-20 md:w-20 md:h-20 left-0 bottom-[80%] md:left-0 md:bottom-[80%] lg:bottom-[80%]">
         <svg width="100%" height="100%" viewBox="0 0 160 160">
           <circle
             cx="80"
