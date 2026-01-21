@@ -2,10 +2,10 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import { Suspense, lazy } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const Hero = lazy(() => import("./compontents/hero/Hero"));
-const Services = lazy(() => import("./compontents/services/Services"));
-const Portfolio = lazy(() => import("./compontents/portfolio/Portfolio"));
-const Contact = lazy(() => import("./compontents/contact/Contact"));
+const Hero = lazy(() => import("./components/hero/Hero"));
+const Services = lazy(() => import("./components/services/Services"));
+const Portfolio = lazy(() => import("./components/portfolio/Portfolio"));
+const Contact = lazy(() => import("./components/contact/Contact"));
 
 const pageTransition = {
   initial: { opacity: 0, y: 40 },
@@ -24,14 +24,14 @@ const AnimatedRoutes = () => {
             element={
               <motion.div {...pageTransition}>
                 <div className="container">
-                  <section id="#home">
+                  <section id="home">
                     <Hero />
                   </section>
-                  <section id="#services">
+                  <section id="services">
                     <Services />
                   </section>
                   <Portfolio />
-                  <section id="#contact">
+                  <section id="contact">
                     <Contact />
                   </section>
                 </div>
