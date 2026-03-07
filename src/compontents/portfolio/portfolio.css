@@ -225,11 +225,11 @@ p.Text h1{
 }
 p.Text p{
     font-weight: 300;
-}
-.pText button{
+}.pText button{
     background-color: antiquewhite;
     padding: 12px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
 } */
+
