@@ -14,7 +14,7 @@ const items = [
     img: hospital,
     title: "Freelancing Project",
     desc: "Designed and developed a healthcare web platform that allows users to search for hospitals, view detailed doctor profiles, and book appointments online.",
-    link: "https://cureitabroad.com/",
+    link: "https://medicomedical.netlify.app/",
     color: "#C4983D",
   },
   {
