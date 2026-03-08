@@ -11,19 +11,20 @@
 }
 
 .portfolio__card {
-  background: #fff;
-  border-radius: 20px;
+  background: var(--color-beige-light);
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 4px 24px rgba(42, 24, 16, 0.08);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease;
+  border: 1px solid rgba(196, 152, 61, 0.15);
 }
 
 .portfolio__card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 16px 48px rgba(110, 45, 4, 0.18);
+  box-shadow: 0 16px 48px rgba(196, 152, 61, 0.2);
 }
 
-/* Make the last card span full width if odd number */
+/* Last card span full width if odd count */
 .portfolio__card:last-child:nth-child(odd) {
   grid-column: 1 / -1;
   max-width: 640px;
@@ -41,7 +42,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio__card:hover .portfolio__card-img img {
@@ -52,7 +53,7 @@
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 0.35s ease;
+  transition: opacity 0.5s ease;
 }
 
 .portfolio__card:hover .portfolio__card-overlay {
@@ -67,35 +68,44 @@
 }
 
 .portfolio__card-content h3 {
-  font-size: 1.3rem;
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
   font-weight: 700;
-  color: #6e2d04;
+  color: var(--color-brown-deep);
+  letter-spacing: -0.01em;
 }
 
 .portfolio__card-content p {
-  font-size: 0.92rem;
-  color: #555;
-  line-height: 1.65;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-brown);
+  line-height: 1.7;
+  opacity: 0.8;
 }
 
 .portfolio__card-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 22px;
-  background: #6e2d04;
-  color: #fff;
-  font-size: 0.9rem;
+  padding: 10px 24px;
+  background: var(--color-brown-deep);
+  color: var(--color-beige-light);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
   font-weight: 600;
-  border-radius: 10px;
+  border-radius: 0;
   text-decoration: none;
   align-self: flex-start;
-  transition: all 0.25s ease;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   margin-top: 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--color-brown-deep);
 }
 
 .portfolio__card-btn:hover {
-  background: #8a3a08;
+  background: transparent;
+  color: var(--color-brown-deep);
   transform: translateX(4px);
 }
 
@@ -124,10 +134,10 @@
   }
 
   .portfolio__card-content h3 {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
 
   .portfolio__card-content p {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
   }
 }
