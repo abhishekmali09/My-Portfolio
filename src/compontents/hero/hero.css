@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  background: linear-gradient(135deg, var(--color-mustard) 0%, var(--color-mustard-light) 50%, var(--color-beige-warm) 100%);
 }
 
 .hero__content {
@@ -20,7 +21,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 24px;
+  gap: 28px;
   padding: 40px 0;
 }
 
@@ -32,82 +33,113 @@
   padding-top: 40px;
 }
 
+/* ===== HUGE EDITORIAL TYPOGRAPHY ===== */
 .hero__title {
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 7vw, 6rem);
   font-weight: 800;
-  color: #6e2d04;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  color: var(--color-brown-deep);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
 }
 
-.hero__title span {
-  color: #fff;
+.hero__greeting {
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: var(--color-brown);
+  display: block;
+  margin-bottom: 4px;
+  letter-spacing: 0.02em;
 }
 
+.hero__name {
+  background: linear-gradient(135deg, var(--color-brown-deep) 0%, var(--color-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+/* ===== SUBTITLE — Small Minimal Captions ===== */
 .hero__subtitle {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .hero__subtitle h2 {
+  font-family: var(--font-serif);
   font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-  font-weight: 700;
-  color: #6e2d04;
+  font-weight: 600;
+  color: var(--color-brown);
+  font-style: italic;
+  letter-spacing: 0.02em;
 }
 
 .hero__subtitle p {
-  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
-  color: #5a2400;
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: var(--color-brown);
   max-width: 520px;
-  line-height: 1.7;
+  line-height: 1.75;
+  font-weight: 400;
+  opacity: 0.85;
 }
 
+/* ===== CTA BUTTON ===== */
 .hero__actions {
   display: flex;
   gap: 16px;
-  margin-top: 12px;
+  margin-top: 16px;
 }
 
 .hero__cta {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 32px;
-  background: #6e2d04;
-  color: #fff;
-  font-size: 1rem;
+  padding: 16px 36px;
+  background: var(--color-brown-deep);
+  color: var(--color-beige-light);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
   font-weight: 600;
-  border-radius: 12px;
+  border-radius: 0;
   text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(110, 45, 4, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 2px solid var(--color-brown-deep);
 }
 
 .hero__cta:hover {
-  background: #8a3a08;
+  background: transparent;
+  color: var(--color-brown-deep);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(110, 45, 4, 0.4);
+  box-shadow: 0 8px 30px rgba(42, 24, 16, 0.2);
 }
 
+/* ===== SOCIALS ===== */
 .hero__socials {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding: 16px;
-  background: #6e2d04;
-  border-radius: 12px;
+  padding: 18px;
+  background: rgba(42, 24, 16, 0.08);
+  border-radius: 0;
+  border: 1px solid rgba(42, 24, 16, 0.12);
+  backdrop-filter: blur(8px);
 }
 
 .hero__socials a {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 .hero__socials a:hover {
-  transform: scale(1.15);
+  transform: scale(1.15) rotate(5deg);
 }
 
 .hero__socials img {
@@ -115,7 +147,7 @@
   height: 28px;
 }
 
-/* 3D background + photo */
+/* ===== 3D BACKGROUND + PHOTO ===== */
 .hero__bg {
   position: absolute;
   top: 50%;
@@ -141,7 +173,7 @@
   object-fit: cover;
 }
 
-/* Tablet */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .hero__bg {
     width: min(400px, 45vw);
@@ -150,11 +182,10 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
-    padding-top: 80px;
+    padding-top: 90px;
     padding-bottom: 40px;
   }
 
@@ -206,7 +237,7 @@
   }
 
   .hero__cta {
-    padding: 12px 24px;
+    padding: 14px 28px;
     font-size: 0.95rem;
   }
 }

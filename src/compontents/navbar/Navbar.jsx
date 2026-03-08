@@ -48,6 +48,7 @@ const Navbar = () => {
                                 onClick={(e) => handleNavClick(e, link.href)}
                             >
                                 {link.label}
+                                <span className="navbar__underline" />
                             </a>
                         </li>
                     ))}

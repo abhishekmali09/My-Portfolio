@@ -15,7 +15,7 @@ const items = [
     title: "Freelancing Project",
     desc: "Designed and developed a healthcare web platform that allows users to search for hospitals, view detailed doctor profiles, and book appointments online.",
     link: "https://cureitabroad.com/",
-    color: "#f4ce5c",
+    color: "#C4983D",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const items = [
     title: "WeatherWise",
     desc: "Developed WeatherWise, a Raspberry Pi-based weather station that provides real-time, geo-mapped weather data for rural areas using integrated sensors and Maps API.",
     link: "https://elaborate-pasca-3e5fd1.netlify.app/",
-    color: "#6a6068",
+    color: "#8B6914",
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const items = [
     title: "Live Sports Tracker",
     desc: "Developed a real-time sports tracking website using React.js and Tailwind CSS with live match data and a responsive, dynamically updating UI.",
     link: "https://github.com/abhishekmali09/Live-Sports-Tracker",
-    color: "#286074",
+    color: "#B8922E",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const items = [
     title: "Corporate Cab Management",
     desc: "Built CabControl, a corporate cab management system using React.js, Tailwind CSS, and Google Maps API with real-time tracking, smart scheduling, and integrated analytics dashboards.",
     link: "https://github.com/abhishekmali09/cabcontrol",
-    color: "#816f93",
+    color: "#D4B15E",
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ const items = [
     title: "FitInsight — AI Fitness Platform",
     desc: "Developed a microservices-based fitness tracking platform using Spring Cloud, Eureka, and API Gateway with secure OAuth2/Keycloak auth, AI-powered workout analysis via Gemini API, food image-based nutrition detection, and RabbitMQ event-driven processing. Built a React dashboard with charts to visualize fitness progress.",
     link: "https://github.com/abhishekmali09",
-    color: "#1a8a5c",
+    color: "#5C3D2E",
   },
   {
     id: 6,
@@ -55,7 +55,7 @@ const items = [
     title: "Banking Application",
     desc: "Developed a RESTful banking application using Spring Boot 3.5 and Java 21, supporting account CRUD and balance operations. Implemented persistence using Spring Data JPA and MySQL with automated schema management. Applied DTO–Entity separation with mappers and configured CORS for seamless Angular frontend integration.",
     link: "https://github.com/abhishekmali09",
-    color: "#1a56db",
+    color: "#3D2B1F",
   },
 ];
 
@@ -69,7 +69,7 @@ const ProjectCard = ({ item, index }) => {
       className="portfolio__card"
       initial={{ opacity: 0, y: 60 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+      transition={{ duration: 0.8, delay: index * 0.12, ease: "easeOut" }}
     >
       <div className="portfolio__card-img">
         <img src={item.img} alt={item.title} loading="lazy" />

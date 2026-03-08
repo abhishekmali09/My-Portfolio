@@ -9,7 +9,7 @@ const awardVariants = {
   animate: {
     x: 0,
     opacity: 1,
-    transition: { duration: 1, staggerChildren: 0.2 },
+    transition: { duration: 1.5, staggerChildren: 0.3, ease: "easeOut" },
   },
 };
 
@@ -18,7 +18,7 @@ const followVariants = {
   animate: {
     y: 0,
     opacity: 1,
-    transition: { duration: 1, staggerChildren: 0.2 },
+    transition: { duration: 1.5, staggerChildren: 0.3, ease: "easeOut" },
   },
 };
 
@@ -34,14 +34,14 @@ const Hero = () => {
       <div className="hero__content">
         <div className="hero__left">
           <motion.h1
-            initial={{ opacity: 0, y: -50 }}
+            initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2 }}
+            transition={{ duration: 1.8, ease: "easeOut" }}
             className="hero__title"
           >
-            Hey There,
+            <span className="hero__greeting">Hey There,</span>
             <br />
-            <span>I am Abhishek!</span>
+            <span className="hero__name">I am Abhishek!</span>
           </motion.h1>
 
           <motion.div
@@ -66,7 +66,7 @@ const Hero = () => {
             className="hero__actions"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.8 }}
+            transition={{ duration: 1.2, delay: 1, ease: "easeOut" }}
           >
             <a href="#contact" className="hero__cta" onClick={handleContactClick}>
               Contact Me
